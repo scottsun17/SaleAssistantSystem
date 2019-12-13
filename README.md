@@ -1,3 +1,4 @@
+
 # Project Two - Sales Assistant Management System
 This is an accounting system to help Team Rocket to manage its' illegal Pokemon trading business. The system is divided into two part: <b>sales assistant section</b> and <b>manager section</b>
 <br />
@@ -100,6 +101,21 @@ The system relies on three database tables for operations:
 ## Flow Chart
 The system flow chart walks through basic design of the system. 
 ![System Flow Chart](https://raw.githubusercontent.com/scottsun17/SaleAssistantSystem/master/pic/SystemChart.png)
+
+## Known Bugs:
+1. The creating new account function does not check pre-existing accounts in the JSON file. One may creates a new account with the exact same username and credential.
+2. All internal information (Pokedex information is external JSON) are stored locally and shared. No procedures in place to prevent concurrency problems. It may cause lost updates.
+3. Selling and purchasing operations are not recorded until the sales assistant perform save and exit operations. If the program crashes during operation, all previous non-saved operations will be lost.
+4.  Account credentials are stored in plain texts.
+
+## Further Possible Development
+1. Add UI
+2. Solve known bugs above
+3. Add manager log in page
+4. Develop into a web application that can be accessed on browser
+5. Add function to remove existing accounts 
+6. Add function to record purchasing assistant's ID. Currently the program only logs the ID of assistant that made the sale. 
+7. Add Purchasing Date and Selling Date 
 
 ## Credits:
 Author: Scott (Ziteng) Sun
